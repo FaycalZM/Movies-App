@@ -1,0 +1,29 @@
+#avatar {
+    width: 35px;
+    height: 35px;
+}
+
+#avatar:hover {
+    transform: scale(1.15);
+    transition: transform .1s ease-in;
+}
+
+.user-avatar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-avatar>p {
+    font-size: larger;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .user-avatar {
+        display: none;
+    }
+}

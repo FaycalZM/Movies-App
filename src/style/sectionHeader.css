@@ -1,0 +1,55 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.section-header>h3 {
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.cards-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cards-section>.infos-wrapper {
+    width: 20%;
+}
+
+@media screen and (min-width : 1024px) and (max-width : 1367px) {
+    .cards-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards-section>.infos-wrapper {
+        width: 30%;
+    }
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .cards-section {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cards-section>.infos-wrapper {
+        width: 95%;
+    }
+
+    .section-header {
+        margin-bottom: 1rem;
+    }
+
+    .section-header>h3 {
+        font-size: 1.35rem;
+    }
+}

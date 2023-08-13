@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.searchForm-ct {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    align-items: center;
+}
+
+.searchForm {
+    width: 60%;
+    position: relative;
+    margin-top: .25rem;
+    margin-left: .25rem;
+}
+
+#inputField {
+    width: 100%;
+    padding: .75rem;
+    outline: none;
+    color: rgba(255, 255, 255, .8);
+    font-size: 16px;
+    font-family: 'Poppins';
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .15);
+}
+
+#inputField::placeholder {
+    color: rgba(255, 255, 255, .4);
+}
+
+.searchIcon {
+    position: absolute;
+    font-size: 22px;
+    right: 2.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    opacity: .6;
+}
+
+.searchIcon:hover {
+    opacity: 1;
+    transition: opacity .2s ease-in;
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .searchForm-ct {
+        width: 100%;
+    }
+
+    .searchForm {
+        width: 100%;
+    }
+}

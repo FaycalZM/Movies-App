@@ -1,0 +1,52 @@
+.big-poster {
+    border-radius: 12.5px;
+    padding-bottom: 1.5rem;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, .75);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    box-shadow: 0 -7rem 9rem rgba(0, 0, 0, .9) inset, 0 1.75rem 10rem rgba(0, 0, 0, .9) inset;
+}
+
+.big-poster>h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.big-poster>h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+/* tablet design */
+
+@media screen and (min-width : 1024px) and (max-width : 1367px) {
+    .big-poster {
+        height: 52.5vh;
+    }
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .big-poster {
+        height: 40vh;
+        box-shadow: 0 -4rem 4rem rgba(0, 0, 0, .7) inset, 0 1rem 4rem rgba(0, 0, 0, .7) inset;
+    }
+
+    .big-poster>h1 {
+        font-size: 1.75rem;
+    }
+
+    .big-poster>h2 {
+        font-size: 1.25rem;
+    }
+}

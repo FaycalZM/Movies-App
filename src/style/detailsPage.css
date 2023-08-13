@@ -1,0 +1,287 @@
+.details {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.poster {
+    width: 37.5%;
+    max-height: 82.5vh;
+    border-radius: 2%;
+    box-shadow: 7.5px 7.5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.infos {
+    padding-left: 1.75rem;
+}
+
+.infos>* {
+    margin-bottom: .5rem;
+}
+
+.infos>h1 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.infos>h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: .9;
+}
+
+.infos>*:first-of-type:is(p) {
+    font-size: .85rem;
+}
+
+.duration {
+    margin-right: .3rem;
+    opacity: .8;
+}
+
+.genre {
+    margin-right: .15rem;
+    text-transform: capitalize;
+}
+
+.infos>*:nth-of-type(2):is(p) {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.star {
+    color: yellow;
+    font-size: 1.4rem;
+}
+
+.rating {
+    font-size: 1.5rem;
+}
+
+.proportion {
+    opacity: .25;
+    font-size: .85rem;
+}
+
+.overview {
+    line-height: 1.75rem;
+    color: rgba(255, 255, 255, .95);
+    width: 90%;
+}
+
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    cursor: pointer;
+    padding: .5rem 1rem;
+    max-width: fit-content;
+    border: none;
+    font-family: 'Poppins';
+    text-transform: capitalize;
+    border-radius: 5px;
+    color: white;
+    opacity: .85;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.read-more {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.add-to-favorites {
+    background-color: rgba(255, 255, 255, .20);
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+}
+
+.btn:hover,
+.images>img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition:
+        opacity .15s ease-in,
+        transform .15s ease-in;
+}
+
+.favorites-star {
+    font-size: 1.2rem;
+}
+
+.add-to-favorites:hover>.favorites-star {
+    color: yellow;
+    transition: color .15s ease-in;
+}
+
+.added-to-favorites {
+    color: yellow;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+.images>img {
+    flex: 1;
+    height: 18vh;
+    max-height: 18vh;
+    max-width: 22.5%;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.cast {
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 22% 22% 22% 22%;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.cast-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cast-member>h5 {
+    margin-top: .4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cast-member>h6 {
+    font-size: .8rem;
+    font-weight: 300;
+    text-align: center;
+    opacity: .85;
+}
+
+.member-img {
+    height: 12vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.count>span {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.1rem;
+}
+
+.count {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .85);
+    text-transform: capitalize;
+}
+
+/* tablet design */
+
+@media screen and (min-width : 1024px) and (max-width : 1367px) {
+    .details {
+        align-items: center;
+        padding-top: 1rem;
+    }
+
+    .poster {
+        width: 45%;
+    }
+
+    .infos {
+        padding-left: 1.25rem;
+    }
+
+    .infos>h1 {
+        font-size: 1.85rem;
+    }
+
+    .images {
+        width: unset;
+        gap: 1.15rem;
+    }
+
+    .images>img {
+        max-width: 31%;
+    }
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .details {
+        flex-direction: column;
+    }
+
+    .poster {
+        width: 90%;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .infos>* {
+        margin-bottom: .75rem;
+    }
+
+    .infos>h1 {
+        margin-top: .5rem;
+        font-size: 1.95rem;
+    }
+
+    .overview {
+        font-size: .95rem;
+    }
+
+    .images {
+        width: unset;
+        gap: 1.25rem;
+    }
+
+    .images>img {
+        max-width: 90%;
+        min-height: 25vh;
+    }
+
+    .cast {
+        grid-template-columns: 40% 40%;
+    }
+
+    .member-img {
+        height: 15vh;
+    }
+
+    .cast-title {
+        text-align: center;
+    }
+
+    .images-title {
+        text-align: center;
+    }
+
+
+}

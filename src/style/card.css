@@ -1,0 +1,101 @@
+.card {
+    height: 47.5vh;
+    width: 100%;
+    border-radius: 12.5px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-transform: capitalize;
+    box-shadow: 0 -1rem 3.5rem rgba(0, 0, 0, .4) inset,
+        0 1.5rem 3.5rem rgba(0, 0, 0, .3) inset,
+        5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .15s ease-in;
+}
+
+.infos-wrapper {
+    cursor: pointer;
+    text-align: center;
+    height: fit-content;
+}
+
+.infos-wrapper>h1 {
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin-top: .75rem;
+    line-height: 1.7rem;
+}
+
+
+.container {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    gap: .5rem 1.5rem;
+}
+
+
+/* favorites card styling */
+.fav-card {
+    position: relative;
+}
+
+.fav-card>button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 3%;
+    top: 2.5%;
+    display: none;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.fav-card>button>.trash-icon {
+    font-size: 1.2rem;
+}
+
+.fav-card:hover>button {
+    display: block;
+    opacity: .8;
+}
+
+.fav-card>button:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: opacity .25s ease-in, transform .25s ease-in;
+}
+
+/* tablet design */
+
+@media screen and (min-width : 1024px) and (max-width : 1367px) {
+    .container {
+        grid-template-columns: 31.5% 31.5% 31.5%;
+    }
+}
+
+/* mobile design */
+@media screen and (max-width : 400px) {
+    .card {
+        min-height: 70vh;
+    }
+
+    .container {
+        grid-template-columns: 85%;
+    }
+
+    .fav-card>button {
+        display: block;
+    }
+
+    .fav-card:hover>button {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,140 @@
+/* radio settings 👇 */
+
+.type-popup {
+    /* total */
+    --total_text_color: #e0e0e0;
+    --total_font_family: Menlo, Roboto Mono, monospace;
+    /* button */
+    --btn_bg: rgba(255, 255, 255, .1);
+    --btn_padding: 0.5em;
+    --btn_height: 2em;
+    --btn_border_radius: 0.3125em;
+    --btn_outline_width: 0.0625em;
+    --btn_outline_color: #A0A0A0;
+    --btn_outline_offset: 0.0625em;
+    --btn_gap: 0.3125em;
+    /* list */
+    --list_padding: 0.5em;
+    --list_bg: var(--btn_bg);
+    --list_border_radius: var(--btn_border_radius);
+    --list_gap: 0.1875em;
+    --list_btn_hover_bg: rgba(255, 255, 255, .25);
+    --list_btn_active: #b9b9b970;
+    --list_btn_border_radius: 0.25em;
+    --list_btn_padding: 0.35em 1em;
+    --list_btn_gap: 0.4375em;
+    --list_btn_outline_width: 0.0625em;
+    --list_btn_outline_color: rgb(212, 210, 210);
+    --list_offset: 0.35em;
+    --list_btn_font_size: 14px;
+    --list_position_left: 0;
+    --list_position_right: unset;
+
+    /* 👆 if you want to change sides just switch one property */
+    /* from properties to "unset" and the other to 0 */
+}
+
+.type-popup__button .type-popup__icons svg,
+#movie,
+#tv,
+#default,
+#checkbox,
+.type-popup__list-container {
+    display: none;
+}
+
+.type-popup {
+    color: var(--total_text_color);
+    font-family: 'Poppins';
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+.type-popup__list-container {
+    position: absolute;
+    left: var(--list_position_left);
+    right: var(--list_position_right);
+    top: calc(var(--btn_height) + var(--list_offset));
+}
+
+
+.type-popup__button {
+    line-height: var(--btn_height);
+    background-color: var(--btn_bg);
+    padding: 0 var(--btn_padding);
+    display: inline-flex;
+    align-items: center;
+    column-gap: var(--btn_gap);
+    border-radius: var(--btn_border_radius);
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.type-popup__list {
+    margin: 0;
+    list-style-type: none;
+    padding: var(--list_padding);
+    border-radius: var(--list_border_radius);
+    background-color: rgba(0, 0, 0, .35);
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--list_gap);
+
+}
+
+.type-popup__list label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: var(--list_btn_gap);
+    padding: var(--list_btn_padding);
+    border-radius: var(--list_btn_border_radius);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.type-popup__list label span {
+    font-size: var(--list_btn_font_size);
+    text-transform: capitalize;
+}
+
+/* actions */
+
+#checkbox:checked~.type-popup__button {
+    outline: var(--btn_outline_width) solid var(--btn_outline_color);
+    outline-offset: var(--btn_outline_offset);
+}
+
+#checkbox:checked~.type-popup__list-container {
+    display: block;
+}
+
+.type-popup__list label:hover,
+.type-popup__button:hover,
+#checkbox:checked~.type-popup__button {
+    background-color: var(--list_btn_hover_bg);
+}
+
+#default:checked~.type-popup__list-container label[for="default"],
+#movie:checked~.type-popup__list-container label[for="movie"],
+#tv:checked~.type-popup__list-container label[for="tv"] {
+    background-color: var(--list_btn_active);
+    outline: none;
+}
+
+
+#default:checked~label svg.default,
+#light:checked~label svg.sun,
+#dark:checked~label svg.moon {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
