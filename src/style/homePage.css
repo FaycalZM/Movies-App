@@ -29,7 +29,7 @@
 
 /* tablet design */
 
-@media screen and (min-width : 1024px) and (max-width : 1367px) {
+@media screen and (min-width : 1024px) and (max-width : 1365px) {
     .big-poster {
         height: 52.5vh;
     }
